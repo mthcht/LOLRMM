@@ -68,6 +68,12 @@ Artifacts:
     ServiceName: AlpemixSrvc
     ImagePath: '*\Alpemix.exe servicestartxxx'
     Description: Service installation event as result of Alpemix installation.
+  - EventID: 4697
+    ProviderName: Microsoft-Windows-Security-Auditing
+    LogFile: Security.evtx
+    ServiceName: AlpemixSrvc
+    ImagePath: '*\Alpemix.exe servicestartxxx'
+    Description: Service installation event as result of Alpemix installation.
   Registry:
   - Path: HKLM\SYSTEM\CurrentControlSet\Services\AlpemixSrvcx
     Description: N/A
