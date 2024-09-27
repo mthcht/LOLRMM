@@ -56,6 +56,12 @@ Artifacts:
           ServiceName: Ammyy Admin
           ImagePath: "C:\\*\\AA_v3.exe" - service
           Description: Ammyy Admin service installation event
+      - EventID: 4697
+        ProviderName: Microsoft-Windows-Security-Auditing
+        LogFile: Security.evtx
+        ServiceName: AmmyyAdmin
+        ImagePath: "C:\\*\\AA_v3.exe" - service
+        Description: Ammyy Admin service installation event
   Registry:
       - Path: HKU\.DEFAULT\Software\Ammyy\Admin
           Key: 'hr3'
@@ -67,6 +73,7 @@ Artifacts:
   - Description: Known remote domains
     Domain:
     - ammyy.com
+    - rl.ammyy.com
     - '*ammyy.com'
   - Description: Ammyy Routers
     IP:
