@@ -10,6 +10,7 @@ Details:
     Filename: ''
     OriginalFileName: ''
     Description: ''
+    CompanyName: 'Aeroadmin LLC'
   Privileges: ''
   Free: ''
   Verification: ''
@@ -21,14 +22,28 @@ Details:
   - AeroAdmin.exe
 Artifacts:
   Disk: []
-  EventLog: []
+  EventLog:
+  - EventID: 7045
+    ProviderName: Service Control Manager
+    LogFile: System.evtx
+    ServiceName: AeroadminService
+    ImagePath: ''
+    Description: Service installation event as result of AeroAdmin installation.
+  - EventID: 4697
+    ProviderName: Microsoft-Windows-Security-Auditing
+    LogFile: Security.evtx
+    ServiceName: AeroadminService
+    ImagePath: ''
+    Description: Service installation event as result of AeroAdmin installation.
   Registry: []
   Network:
   - Description: Known remote domains
     Domains:
     - auth*.aeroadmin.com
     - aeroadmin.com
-    Ports: []
+    - ulm.aeroadmin.com
+    Ports: 
+    - 5950
 Detections:
 - Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/aeroadmin_network_sigma.yml
   Description: Detects potential network activity of AeroAdmin RMM tool
@@ -36,4 +51,5 @@ Detections:
   Description: Detects potential processes activity of AeroAdmin RMM tool
 References:
 - https://support.aeroadmin.com/kb/faq.php?id=58
+- https://github.com/mthcht/awesome-lists/blob/main/Lists/RMM/aeroadmin
 Acknowledgement: []
