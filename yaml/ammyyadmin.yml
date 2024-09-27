@@ -10,6 +10,7 @@ Details:
     Filename: 'AA_v3.exe'
     OriginalFileName: ''
     Description: 'Ammyy Admin'
+    CompanyName: 'Ammyy LLC'
   Privileges: 'Curent User'
   Free: 'Yes/1 active session at a time'
   Verification: 'None'
