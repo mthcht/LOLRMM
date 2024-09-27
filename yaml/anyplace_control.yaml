@@ -10,6 +10,7 @@ Details:
     Filename: ''
     OriginalFileName: ''
     Description: ''
+    CompanyName: 'Anyplace Control Software'
   Privileges: ''
   Free: ''
   Verification: ''
@@ -19,14 +20,17 @@ Details:
   InstallationPaths:
   - apc_host.exe
 Artifacts:
-  Disk: []
+  Disk: 
+    - File: 'C:\Program Files (x86)\Anyplace Control\*'
+      Description: Multiple files and binaries related to Anyplace Control installation
+      OS: Windows
   EventLog: []
   Registry: []
   Network:
   - Description: Known remote domains
     Domains:
     - anyplace-control.com
-    Ports: []
+    Ports: 443
 Detections:
 - Sigma: https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/anyplace_control_network_sigma.yml
   Description: Detects potential network activity of Anyplace Control RMM tool
